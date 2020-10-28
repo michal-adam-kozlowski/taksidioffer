@@ -1,0 +1,190 @@
+@import "~video-react/styles/scss/video-react";
+
+#sliderContainer {
+    height: 570px;
+    background-size: cover;
+    background-position: center;
+
+    .stripeBox {
+        width: 35%;
+        height: 100%;
+        background-color: transparent;
+        position: absolute; /*add*/
+        top: 0; /*add*/
+        z-index: 2;
+
+        .stripe {
+            position: absolute;
+            left: 100px;
+            top: 0;
+            width: 85%;
+            height: 570px; /* add */
+            background-color: #0a1e2c;
+            z-index: 0;
+
+            .logoBox {
+                width: 150px;
+                position: absolute;
+                margin: 10px 40px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .textBox {
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+
+            .text {
+                position: absolute;
+                color: white;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 80%;
+
+                h1 {
+                    font-weight: 400;
+                    margin-bottom: 0;
+                    color: white;
+                    font-size: 30px;
+                }
+
+                p {
+                    color: #dedbdb;
+                    margin-bottom: 28px;
+                }
+
+                .btn {
+                    width: 180px;
+                    height: 50px;
+                    background-color: #ffd15f;
+                    border-radius: 30px;
+                    border: none;
+                    cursor: pointer;
+                    outline: none;
+                    font-size: 16px;
+
+                    &:hover {
+                        font-weight: 500;
+                        margin: 0;
+                        background-color: white;
+                        border: 1px solid white;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.video-react {
+    height: 570px!important;
+    padding: 0 !important;
+    pointer-events: none;
+}
+
+.video-react-video {
+    object-fit: none;
+}
+
+.video-react-has-started .video-react-control-bar {
+    display: none;
+}
+
+#content > header > div > button {
+    display: none;
+}
+
+.video-react .video-react-video {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.awssld {
+    width: 100%;
+    max-width: 100%;
+    height: 570px;
+    position: initial;
+}
+
+.awssld__content div, .awssld__content div img {
+    width: 100%;
+}
+
+.awssld__timer--run {
+    transform: translateX(0);
+    /* display: none; */
+    visibility: hidden;
+  }
+
+  .awssld__controls__arrow-left:before, .awssld__controls__arrow-left:after, .awssld__controls__arrow-right:before, .awssld__controls__arrow-right:after {
+    content: ' ';
+    position: absolute;
+    right: calc( 20% - ( 0.7071 * (var(--organic-arrow-height) + var(--organic-arrow-thickness)) ) / 2);
+  
+}
+
+.awssld__controls__arrow-left:before, .awssld__controls__arrow-left:after {
+    right: auto;
+    left: calc( 20% - ( 0.7071 * (var(--organic-arrow-height) + var(--organic-arrow-thickness)) ) / 2);
+}
+
+.awssld__bullets {
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 1200px) {
+    .video-react-video {
+        object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #sliderContainer {
+        background-image: url("./img/cover-taksidi.jpg");
+    }
+
+    .video-react.video-react-fluid,
+    .video-react.video-react-16-9,
+    .video-react.video-react-4-3 {
+        display: none;
+    }
+
+    .awssld {
+        display: none;
+    }
+}
+
+@media only screen and(max-width: 1200px) {
+    #sliderContainer {
+        padding-left: 0;
+
+        .stripeBox {
+            width: 100%;
+            .stripe {
+                left: 0;
+                width: 100%;
+                background: #00000094;
+
+                .logoBox {
+                    width: 100px;
+                    padding: 7px 10px;
+                    margin: 0;
+                    margin-left: 20px;
+                }
+
+                .textBox .text {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

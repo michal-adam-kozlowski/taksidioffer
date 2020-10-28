@@ -1,0 +1,197 @@
+#footerContainer {
+    height: 520px;
+    color: white;
+    background-color: #0a1e2c;
+
+    .footerMenu {
+        height: 320px;
+        width: 1000px;
+        margin: auto;
+        max-width: 90vw;
+
+        .top {
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            padding-top: 30px;
+            align-items: center;
+
+            .imageLogo {
+                width: 120px;
+                img {
+                    width: 100%;
+                }
+            }
+
+            .socialMediaContainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 200px;
+
+                p {
+                    color: #848e95;
+                    white-space: nowrap;
+                }
+                .icons {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 100px;
+
+                    i {
+                        color: white;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            .oneFooterBox {
+                h5 {
+                    color: #848e95;
+                    font-size: 13px;
+                }
+
+                p, a {
+                    color: white;
+                    font-family: sans-serif;
+                    letter-spacing: 0.4px;
+                    margin-bottom: 14px;
+                    text-decoration: none;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .footerContact {
+        background-color: #05131d;
+
+        .container {
+            width: 1000px;
+            margin: auto;
+            border-bottom: 1px solid grey;
+            max-width: 90vw;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 85%;
+            height: 180px;
+            padding-top: 20px;
+
+            .oneContactBox {
+                width: 150px;
+                line-height: 1.2;
+
+                h5 {
+                    color: #848e95;
+                    font-size: 13px;
+                }
+
+                p {
+                    color: white;
+                    font-size: 14px;
+                    letter-spacing: 0.4px;
+                    margin-top: 5px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .footerBottom {
+            display: flex;
+            justify-content: space-between;
+            width: 1000px;
+            margin: auto;
+            max-width: 90vw;
+
+            .text {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 80%;
+                p {
+                    color: #636c72;
+                    margin-right: 10px;
+                }
+            }
+
+            .logo {
+                max-width: 90vw;
+            }
+            .copyRight2 {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #footerContainer {
+        .footerMenu {
+            height: 120px;
+            display: flex;
+            .wrapper {
+                display: none;
+            }
+            .top {
+                flex-direction: column;
+                height: auto;
+                padding: 0;
+
+                .socialMediaContainer {
+                    width: auto;
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .footerContact {
+            .container {
+                max-width: 90vw;
+            }
+        
+            .container > div > div:nth-child(1) > h5 {
+                margin-top: 0;
+            }
+        
+            .wrapper {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: auto;
+                padding: 30px 0;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footerBottom {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 10px;
+        
+                .logo img {
+                    width: 100%;
+                }
+                .copyRight {
+                    display: none;
+                }
+        
+                .copyRight2 {
+                    display: block;
+                    color: #636c72;
+                    font-size: 13px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+

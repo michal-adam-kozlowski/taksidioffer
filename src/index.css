@@ -1,13 +1,101 @@
+* {
+  color: #0a1e2c;
+  font-family: SpaceGrotesk;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+}
+
+a {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4 {
+  font-family: SpaceGrotesk-Medium;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 15px;
+}
+
+p.textSmall {
+  font-size: 15px;
+  color: #858585;
+}
+
+p.infoText {
+  color: #d50101;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(./fonts/SpaceGrotesk-Regular.otf);
+}
+
+@font-face {
+  font-family: SpaceGrotesk-Medium;
+  src: url(./fonts/SpaceGrotesk-Medium.otf);
+}
+
+@font-face {
+  font-family: SpaceGrotesk-Bold;
+  src: url(./fonts/SpaceGrotesk-Medium.otf);
+}
+
+@font-face {
+  font-family: SpaceGrotesk-SemiBold;
+  src: url(./fonts/SpaceGrotesk-SemiBold.otf);
+}
+
+@font-face {
+  font-family: SpaceGrotesk-Light;
+  src: url(./fonts/SpaceGrotesk-Light.otf);
+}
+
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.btn {
+  width: 180px;
+  height: 50px;
+  background-color: #ffd15f;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+}
+
+.btn:hover {
+  font-weight: 500;
+  background-color: white;
+  border: 1px solid white;
+  color: black;
 }

@@ -1,25 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+
+import React, { useEffect } from 'react';
 import './App.css';
+import MenuPage from "./MenuPage.js"
+import MainPage from './mainPage/MainPage.js'
+import UserRegistration from './userRegistration/UserRegistration.js'
+import Footer from './Footer.js'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  useLocation,
+  withRouter
+} from "react-router-dom";
+
+function _ScrollToTop(props) {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return props.children
+}
+const ScrollToTop = withRouter(_ScrollToTop)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+      <div>
+        <ScrollToTop>
+        <MenuPage />
+          <Switch>
+            <Route exact path="/" component={MainPage} />
+            <Route path="/Zaloguj" component={UserRegistration} />
+          </Switch>
+          <Footer />
+        </ScrollToTop>
+      </div>
+    </Router>
   );
 }
 

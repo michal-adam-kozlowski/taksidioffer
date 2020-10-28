@@ -1,0 +1,204 @@
+#login {
+    background-color: #e4f4fb;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        width: 550px;
+        box-shadow: 0px 0px 32px -4px rgba(0, 0, 0, 0.19);
+        height: auto;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        margin-top: 150px;
+        margin-bottom: 100px;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        max-width: 90vw;
+        .box.one {
+            border: none;
+            padding: 20px;
+
+            .greenBox {
+                height: auto;
+                width: 350px;
+                padding: 20px;
+                border-radius: 10px;
+                background-color: #e5f6ea;
+
+                p {
+                    line-height: 1.5;
+                    font-size: 15px;
+                    margin-bottom: 0;
+
+                    span {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        p.infoText {
+            margin-top: 0;
+            color: #1eb74c;
+        }
+
+        .box.two {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 10px;
+            max-width: 90vw;
+
+            h3 {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .form {
+                width: 380px;
+                text-align: center;
+                i {
+                    font-size: 18px;
+                    cursor: pointer;
+                }
+
+                form {
+                   
+                    .passwordBox {
+                        position: relative;
+                        span {
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                    p {
+                        text-align: left;
+                        margin-bottom: 5px;
+                        margin-top: 10px;
+                        font-size: 15px;
+                    }
+                    input[type="email"],
+                    input[type="password"],
+                    input[type="text"] {
+                        width: 370px;
+                        padding: 4px 10px;
+                        margin: 0;
+                        height: 35px;
+                        border-radius: 5px;
+                        border: 1px solid grey;
+                        padding-right: 0;
+                        font-size: 17px;
+                    }
+
+                    input[type="email"]::-webkit-input-placeholder,
+                    input[type="password"]::-webkit-input-placeholder,
+                    input[type="text"]::-webkit-input-placeholder {
+                        font-size: 16px;
+                        color: #808080a6;
+                    }
+
+                    input[type="email"]:focus,
+                    input[type="password"]:focus,
+                    input[type="text"]:focus {
+                        outline: grey auto 1px;
+                    }
+
+                    .linkPassword {
+                        text-align: right;
+                        margin-top: 10px;
+                        a {
+                            text-decoration: none;
+                            font-size: 15px;
+                            font-family: SpaceGrotesk-SemiBold;
+
+                            i.arrow {
+                                border: solid black;
+                                border-width: 0 3px 3px 0;
+                                display: inline-block;
+                                padding: 2.6px;
+                                transform: rotate(-45deg);
+                                -webkit-transform: rotate(-45deg);
+                                margin-left: 4px;
+                            }
+                        }
+                    }
+
+                    .agree {
+                        text-align: left;
+                        margin-top: 25px;
+                        margin-bottom: 20px;
+                        color: #7a7a7a;
+                        p {
+                            margin-top: 0;
+                            margin-left: 5px;
+                            letter-spacing: 0.4px;
+                            line-height: 1.3;
+
+                            a {
+                                color: #7a7a7a;
+                                text-decoration: underline;
+                            }
+                        }
+                        div {
+                            display: flex;
+                            margin-bottom: 15px;
+                        }
+                    }
+                   
+
+                    .btn {
+                        font-family: SpaceGrotesk-Bold;
+                        margin-top: 40px;
+                    }
+                }
+                .btnBox2 {
+                    .btn {
+                        font-weight: 500;
+                        background-color: white;
+                        color: #0a1e2c;
+                        border: 1px solid #0a1e2c;
+                        margin-top: 20px;
+
+                        &:hover {
+                            border: 1px solid white;
+                            color: white;
+                            background-color: #0a1e2c;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #login .container {
+        .box.one {
+        .greenBox {
+            width: auto;
+        }}
+
+        .box.two {
+            .form {
+                width: 300px;
+                form {
+                    input[type="email"],
+                    input[type="password"],
+                    input[type="text"] {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

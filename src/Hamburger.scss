@@ -1,0 +1,118 @@
+.beforeAfter {
+  transition: all 0.25s;
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 3.5px;
+  width: 20px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.menuCollapsed {
+  transition: all 0.25s;
+  position: absolute;
+  top: 10px;
+  right: 9px;
+  height: 36px;
+  width: 100%;
+  z-index: 2;
+  cursor: pointer;
+  display: none;
+
+  .logoBox {
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+
+    img {
+      height: 50px;
+    }
+  }
+  p {
+    color: white;
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    margin: 0;
+  }
+  ul {
+    transition: all 0s;
+    position: absolute;
+    right: -9000px;
+  }
+}
+.bar {
+  @extend .beforeAfter;
+  position: absolute;
+  right: 20px;
+  top: 13px;
+  &:before {
+    @extend .beforeAfter;
+    top: -8px;
+  }
+  &:after {
+    @extend .beforeAfter;
+    top: 8px;
+  }
+}
+.beforeAfter-expanded {
+  transition: all 0.25s;
+  top: -0px;
+}
+.menuExpanded {
+  transition: all 0.25s;
+  line-height: 30px;
+  height: auto;
+  width: 100%;
+  border-radius: 0px;
+  top: 50px;
+  right: 0;
+  background-color: #0a1e2c;
+  ul {
+    transition: all 0s;
+    position: relative;
+    right: 0;
+    z-index: 2;
+
+    li {
+      list-style-type: none;
+    }
+  }
+  a {
+    transition: all 0.15s;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+    color: #fff;
+    display: block;
+    &:hover {
+      transition: all 0.15s;
+      letter-spacing: 1px;
+      color: #f9fafa9e;
+    }
+  }
+  .bar {
+    background-color: transparent;
+    transition: all 0.25s;
+    top: -30px;
+    &:before {
+      @extend .beforeAfter-expanded;
+      transform: rotate(45deg);
+    }
+    &:after {
+      @extend .beforeAfter-expanded;
+      transform: rotate(-45deg);
+    }
+  }
+}
+.row {
+  padding-top: 150px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .menuCollapsed {
+    display: block;
+  }
+}

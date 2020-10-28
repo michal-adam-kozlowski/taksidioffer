@@ -1,0 +1,169 @@
+#reset {
+    background-color: #e4f4fb;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        width: 550px;
+        box-shadow: 0px 0px 32px -4px rgba(0, 0, 0, 0.19);
+        height: auto;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        margin-top: 150px;
+        margin-bottom: 100px;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        max-width: 90vw;
+        .firstPart {
+        width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    border-bottom: 1px solid #eaeaea;
+
+        .box {
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 10px;
+            max-width: 90vw;
+            
+
+            h3 {
+                text-align: center;
+                margin: 10px 0 15px;
+            }
+
+            p {
+                text-align: center;
+                max-width: 370px;
+            }
+
+            .form {
+                width: 380px;
+                text-align: center;
+                i {
+                    font-size: 18px;
+                    cursor: pointer;
+                }
+
+                form {
+                   
+                    .passwordBox {
+                        position: relative;
+                        span {
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                    p {
+                        text-align: left;
+                        margin-bottom: 5px;
+                        margin-top: 10px;
+                        font-size: 15px;
+                    }
+                    input[type="email"],
+                    input[type="password"],
+                    input[type="text"] {
+                        width: 370px;
+                        padding: 4px 10px;
+                        margin: 0;
+                        height: 35px;
+                        border-radius: 5px;
+                        border: 1px solid #eaeaea;
+                        padding-right: 0;
+                        font-size: 17px;
+                    }
+
+                    input[type="email"]::-webkit-input-placeholder,
+                    input[type="password"]::-webkit-input-placeholder,
+                    input[type="text"]::-webkit-input-placeholder {
+                        font-size: 16px;
+                        color: #808080a6;
+                    }
+
+                    input[type="email"]:focus,
+                    input[type="password"]:focus,
+                    input[type="text"]:focus {
+                        outline: grey auto 1px;
+                    }
+
+                    .linkPassword {
+                        text-align: left;
+                        margin: 30px 0;
+                        text-align: center;
+                    
+                        a {
+                            text-decoration: none;
+                            font-size: 15px;
+                            font-family: SpaceGrotesk-SemiBold;
+
+                            i.arrow {
+                                border: solid black;
+                                border-width: 0 3px 3px 0;
+                                display: inline-block;
+                                padding: 2.6px;
+                                transform: rotate(-45deg);
+                                -webkit-transform: rotate(-45deg);
+                                margin-left: 4px;
+                            }
+                        }
+                    }
+                }
+                   
+                   
+
+                    .btn {
+                        font-family: SpaceGrotesk-Bold;
+                        margin-top: 40px;
+                    }
+                }
+               
+            }
+        }
+        .btnBox2 {
+            margin-top: 40px;
+            .btn {
+                font-weight: 500;
+                font-family: SpaceGrotesk-Bold;
+                width: 200px;
+                background-color: white;
+                color: #0a1e2c;
+                border: 1px solid #0a1e2c;
+
+                &:hover {
+                    border: 1px solid white;
+                    color: white;
+                    background-color: #0a1e2c;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #login .container {
+    
+        .box {
+            .form {
+                width: 300px;
+                form {
+                    input[type="email"],
+                    input[type="password"],
+                    input[type="text"] {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+$fColor: #666;
+$textTestimonial: Poppins, sans-serif;
+$bgTestimonials: #6d656514;
+$fColor: #666;
+$fFamily: Georgia, serif;
+$borderImg: rgb(248, 248, 248);
+$sColor: rgba(0, 0, 0, 0.32);
+
+.oneTestimonial {
+    width: 270px;
+    height: 250px;
+    text-align: center;
+    position: relative;
+    border-radius: 6px;
+    background-color: white;
+    margin: 0 15px;
+
+    &:before {
+        content: "\201C";
+        font-family: $fFamily;
+        color: $fColor;
+        font-size: 100px;
+        position: absolute;
+        left: 10px;
+    }
+
+    .testimonialImage {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 5px solid $borderImg;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 4px 11px 30px -4px $sColor;
+        object-fit: cover;
+    }
+
+    .testimonialName {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, -50%);
+        font-weight: normal;
+        font-size: 14px;
+        color: #666;
+        width: 100%;
+        font-weight: 600;
+        span {
+        color: #666;
+        }
+    }
+
+    .testimonialText {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        width: 90%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-bottom: 15px;
+        color: #666;
+        line-height: 1.6;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .oneTestimonial {
+        margin-top: 20px;
+    }
+}
